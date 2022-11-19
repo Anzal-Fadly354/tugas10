@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-var _username = ["username"];
-var _password = ["password123"];
-int _i = 1;
+var _username = [""];
+var _password = [""];
+int _i = 0;
 
 class Authentication {
   bool fetchCredentials(String username, String password) {

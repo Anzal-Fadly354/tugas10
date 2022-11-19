@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +24,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         resizeToAvoidBottomInset: true,
-        backgroundColor: const Color.fromRGBO(40, 38, 56, 1),
+        backgroundColor: Color.fromARGB(255, 18, 7, 100),
         body: LoginScreen(),
         bottomNavigationBar: BottomAppBar(
             color: Colors.transparent,
@@ -34,7 +32,7 @@ class MyApp extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.all(20),
               child: Text(
-                "Company name, Inc",
+                "Anzal Fadly Hadi Pratama, Inc",
                 style: TextStyle(color: Colors.white),
                 textAlign: TextAlign.center,
               ),
@@ -83,14 +81,26 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 200,
                 width: 400,
                 alignment: Alignment.center,
-                child: Text(
-                  "Login",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 34,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  // textAlign: TextAlign.center,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Selamat Datang',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 50,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      'Silahkan Login Terlebih Dahulu',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -110,10 +120,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 alignment: Alignment.centerLeft,
                 padding: EdgeInsets.all(10),
                 child: Text(
-                  "Wrong credentials entered",
+                  "Sorry, you got the wrong password",
                   style: TextStyle(
                     color: Colors.red,
-                    fontSize: 10,
+                    fontSize: 20,
                   ),
                 ),
               ),
@@ -178,8 +188,8 @@ class _LoginScreenState extends State<LoginScreen> {
               width: 570,
               height: 70,
               padding: EdgeInsets.only(top: 20),
-              child: RaisedButton(
-                  color: Colors.pink,
+              child: MaterialButton(
+                  color: Colors.red,
                   child: Text("Submit", style: TextStyle(color: Colors.white)),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30)),
@@ -243,28 +253,44 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomInset: true,
-        backgroundColor: const Color.fromRGBO(40, 38, 56, 1),
+        backgroundColor: Color.fromARGB(255, 6, 151, 241),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Center(
               child: Container(
-                  height: 400,
-                  width: 200,
-                  padding: EdgeInsets.all(20),
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Successfull login!",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white, fontSize: 25),
-                  )),
+                height: 400,
+                width: 800,
+                alignment: Alignment.center,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Successfull Login, Thank You',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 50,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      'Anzal Fadly Hadi Pratama',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
             Container(
               height: 100,
               width: 570,
               padding: EdgeInsets.all(20),
-              child: RaisedButton(
-                  color: Colors.pink,
+              child: MaterialButton(
+                  color: Colors.green,
                   child: Text("Logout", style: TextStyle(color: Colors.white)),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30)),
@@ -301,7 +327,7 @@ class _SignupPage extends State<SignupPage> {
           child: Container(
             padding: EdgeInsets.all(20),
             child: Text(
-              "Company name, Inc",
+              "Anzal Fadly Hadi Pratama, Inc",
               style: TextStyle(color: Colors.white),
               textAlign: TextAlign.center,
             ),
@@ -358,7 +384,7 @@ class _SignupPageContent extends State<SignupPageContent> {
               width: 400,
               alignment: Alignment.center,
               child: Text(
-                "Signup",
+                "Sign up",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 34,
@@ -474,9 +500,9 @@ class _SignupPageContent extends State<SignupPageContent> {
             width: 570,
             height: 70,
             padding: EdgeInsets.only(top: 20),
-            child: RaisedButton(
-                color: Colors.pink,
-                child: Text("Submit", style: TextStyle(color: Colors.white)),
+            child: MaterialButton(
+                color: Colors.red,
+                child: Text("sign up", style: TextStyle(color: Colors.white)),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30)),
                 onPressed: () async {
