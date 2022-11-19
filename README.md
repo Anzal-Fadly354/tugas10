@@ -7,8 +7,8 @@ A Flutter project that gives basic flutter design to implement a login UI.
 This project demonstrates a widget to make a fully functioning login UI.\
 Please integrate database or other things on your own. I hardcorded the credentials.
 ```
-Username: username
-Password: password123
+Username: fadly
+Password: 123456
 ```
 They are case sensitive.
 
